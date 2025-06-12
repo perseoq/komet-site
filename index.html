@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komet - Precisión financiera al alcance de tu equipo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(107, 70, 193, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-primary-700 font-bold text-2xl">Komet</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary-600 transition-colors">Características</a>
+                    <a href="#who" class="text-gray-600 hover:text-primary-600 transition-colors">¿Para quién?</a>
+                    <a href="#demo" class="text-gray-600 hover:text-primary-600 transition-colors">Demo</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary-600 transition-colors">Testimonios</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-primary-600 transition-colors">Precios</a>
+                    <a href="#contact" class="bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors">Solicitar Demo</a>
+                </div>
+                <div class="flex md:hidden items-center">
+                    <button class="text-gray-600 hover:text-primary-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-24 pb-20 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Transforma tu gestión financiera con Komet</h1>
+                    <p class="text-xl mb-8 text-primary-100">Planifica presupuestos, anticipa escenarios y toma decisiones estratégicas con la velocidad de la automatización.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-primary-700 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors">Solicita una demo</a>
+                        <a href="#demo" class="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-primary-700 transition-colors">Ver video</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dashboard financiero" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Komet -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Qué es Komet?</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Komet es una plataforma inteligente de control presupuestal y proyección financiera (forecasting), diseñada para empresas que quieren tomar decisiones informadas y evitar desviaciones económicas. Con tecnología robusta y una interfaz intuitiva, Komet te permite planificar, controlar y simular tus finanzas en tiempo real.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Beneficios clave</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Presupuesto colaborativo</h3>
+                    <p class="text-gray-600">Involucra a todos tus departamentos en la planificación financiera sin necesidad de hojas de cálculo.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Alertas automáticas</h3>
+                    <p class="text-gray-600">Detecta desviaciones antes de que se conviertan en problemas con notificaciones inteligentes.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Forecasting adaptable</h3>
+                    <p class="text-gray-600">Simula escenarios futuros con solo unos clics y toma decisiones basadas en datos.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Integración sin fricción</h3>
+                    <p class="text-gray-600">Conéctalo con tus sistemas contables o ERP para mantener todos tus datos sincronizados.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Seguridad de nivel empresarial</h3>
+                    <p class="text-gray-600">Todos tus datos protegidos con cifrado avanzado y cumplimiento de normativas.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md transition-all duration-300 card-hover">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Dashboards personalizables</h3>
+                    <p class="text-gray-600">Visualiza los KPIs que realmente importan para tu negocio con paneles adaptables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who is Komet for -->
+    <section id="who" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">¿Para quién es Komet?</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-lg text-gray-600">
+                                <span class="font-semibold text-gray-800">CFOs y gerentes financieros</span> que necesitan control y visibilidad total.
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-lg text-gray-600">
+                                <span class="font-semibold text-gray-800">Analistas y planners</span> que crean escenarios complejos.
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-lg text-gray-600">
+                                <span class="font-semibold text-gray-800">Empresas medianas y grandes</span> que desean dejar atrás las hojas de Excel.
+                            </p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-primary-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-lg text-gray-600">
+                                <span class="font-semibold text-gray-800">Startups en crecimiento</span> que necesitan proyecciones claras para inversionistas.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-first md:order-last">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Equipo financiero" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots and Demo -->
+    <section id="demo" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Visualiza Komet en acción</h2>
+            <p class="text-xl text-gray-600 text-center mb-12">Paneles personalizables, proyecciones visuales y alertas inteligentes.</p>
+            
+            <div class="mb-16">
+                <div class="aspect-w-16 aspect-h-9">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="Video demostrativo" class="rounded-xl shadow-xl object-cover w-full">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="bg-primary-600 text-white rounded-full p-4 hover:bg-primary-700 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dashboard de Komet" class="rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold">Dashboard principal</h3>
+                    <p class="text-gray-600">Vista general de todos tus KPIs financieros en tiempo real.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Forecasting en Komet" class="rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold">Módulo de forecasting</h3>
+                    <p class="text-gray-600">Crea y compara múltiples escenarios financieros.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Alertas en Komet" class="rounded-lg shadow-md mb-4">
+                    <h3 class="text-lg font-semibold">Sistema de alertas</h3>
+                    <p class="text-gray-600">Configuración de notificaciones para prevenir desviaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Lo que dicen nuestros clientes</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Torres" class="h-16 w-16 rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Ana Torres</h4>
+                            <p class="text-gray-600">Gerente Financiera en AgroInsure</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Reducimos el 80% del tiempo que tardábamos en consolidar presupuestos de cada área. Ahora podemos dedicar ese tiempo a analizar los datos y tomar mejores decisiones."
+                    </p>
+                    <div class="mt-4 text-primary-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mateo Jaramillo" class="h-16 w-16 rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Mateo Jaramillo</h4>
+                            <p class="text-gray-600">CEO de Finovatech</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Con Komet logramos proyectar distintos escenarios financieros antes de una ronda de inversión. Fue clave para nuestro pitch y para conseguir el financiamiento que necesitábamos."
+                    </p>
+                    <div class="mt-4 text-primary-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Carolina Méndez" class="h-16 w-16 rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Carolina Méndez</h4>
+                            <p class="text-gray-600">CFO de Retail Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Las alertas automáticas nos han permitido detectar desviaciones presupuestales a tiempo. Hemos mejorado nuestra eficiencia financiera en un 35% desde que implementamos Komet."
+                    </p>
+                    <div class="mt-4 text-primary-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto Vega" class="h-16 w-16 rounded-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Roberto Vega</h4>
+                            <p class="text-gray-600">Director Financiero en TechGlobal</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "La integración con nuestro ERP fue sorprendentemente sencilla. En menos de una semana ya teníamos todo funcionando y nuestro equipo adaptado al nuevo sistema."
+                    </p>
+                    <div class="mt-4 text-primary-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">¿Por qué elegir Komet?</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-xl shadow-md">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="py-4 px-6 text-left text-lg font-semibold">Característica</th>
+                            <th class="py-4 px-6 text-center text-lg font-semibold text-primary-700">Komet</th>
+                            <th class="py-4 px-6 text-center text-lg font-semibold">Excel / Manual</th>
+                            <th class="py-4 px-6 text-center text-lg font-semibold">Otro software genérico</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-4 px-6">Presupuestación colaborativa</td>
+                            <td class="py-4 px-6 text-center text-primary-600"><i class="fas fa-check-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-red-500"><i class="fas fa-times-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-yellow-500"><i class="fas fa-exclamation-circle text-xl"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6">Forecasting visual</td>
+                            <td class="py-4 px-6 text-center text-primary-600"><i class="fas fa-check-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-red-500"><i class="fas fa-times-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-yellow-500"><i class="fas fa-exclamation-circle text-xl"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6">Alertas inteligentes</td>
+                            <td class="py-4 px-6 text-center text-primary-600"><i class="fas fa-check-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-red-500"><i class="fas fa-times-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-yellow-500"><i class="fas fa-exclamation-circle text-xl"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6">Integración con ERP</td>
+                            <td class="py-4 px-6 text-center text-primary-600"><i class="fas fa-check-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-yellow-500"><i class="fas fa-exclamation-circle text-xl"></i></td>
+                            <td class="py-4 px-6 text-center text-yellow-500"><i class="fas fa-exclamation-circle text-xl"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6">Tiempo de implementación</td>
+                            <td class="py-4 px-6 text-center font-medium">1 semana</td>
+                            <td class="py-4 px-6 text-center">N/A</td>
+                            <td class="py-4 px-6 text-center">3-4 semanas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Planes y precios</h2>
+            <p class="text-xl text-gray-600 text-center mb-12">Todos los planes incluyen soporte personalizado y acceso completo a funcionalidades clave.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Plan 1 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Empresas pequeñas</h3>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$49</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Hasta 5 usuarios</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Soporte por email</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Forecasting básico</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Alertas básicas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>1 integración</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-primary-600 text-white py-3 px-6 rounded-md hover:bg-primary-700 transition-colors">Comenzar ahora</a>
+                    </div>
+                </div>
+                
+                <!-- Plan 2 -->
+                <div class="bg-primary-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg relative">
+                    <div class="absolute top-0 right-0 bg-primary-600 text-white px-4 py-1 rounded-bl-lg font-medium">
+                        Popular
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Escalamiento</h3>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$149</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Hasta 20 usuarios</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Soporte por email + chat</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Forecasting avanzado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Alertas personalizadas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>3 integraciones</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-primary-600 text-white py-3 px-6 rounded-md hover:bg-primary-700 transition-colors">Comenzar ahora</a>
+                    </div>
+                </div>
+                
+                <!-- Plan 3 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Corporativo</h3>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">A medida</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Usuarios ilimitados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Soporte prioritario</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Forecasting multiescenario</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Alertas avanzadas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-600 mr-2"></i>
+                                <span>Integraciones ilimitadas</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center bg-primary-600 text-white py-3 px-6 rounded-md hover:bg-primary-700 transition-colors">Contactar ventas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Recursos y artículos</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2011&q=80" alt="Presupuesto operativo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">¿Cómo hacer un presupuesto operativo eficiente?</h3>
+                        <p class="text-gray-600 mb-4">Aprende las mejores prácticas para crear presupuestos que realmente funcionen para tu empresa.</p>
+                        <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Leer más →</a>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2006&q=80" alt="Forecasting financiero" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Forecasting financiero para empresas medianas: guía paso a paso</h3>
+                        <p class="text-gray-600 mb-4">Descubre cómo proyectar tus finanzas de manera precisa y tomar mejores decisiones.</p>
+                        <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Leer más →</a>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Métricas financieras" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Las 5 métricas que todo CFO debe controlar en 2025</h3>
+                        <p class="text-gray-600 mb-4">Conoce los indicadores financieros más relevantes para el éxito de tu empresa.</p>
+                        <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Leer más →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-white border border-primary-600 text-primary-600 px-6 py-3 rounded-md font-medium hover:bg-primary-50 transition-colors">Ver todos los artículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para transformar tu planeación financiera?</h2>
+                <p class="text-xl mb-8">Descubre por qué Komet es la elección inteligente para empresas en crecimiento.</p>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Solicita una demo personalizada</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-left text-sm font-medium text-gray-700 mb-1">Nombre completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 text-gray-800">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-left text-sm font-medium text-gray-700 mb-1">Empresa</label>
+                                <input type="text" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 text-gray-800">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-left text-sm font-medium text-gray-700 mb-1">Email corporativo</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 text-gray-800">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-left text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 text-gray-800">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-left text-sm font-medium text-gray-700 mb-1">¿Qué te gustaría saber sobre Komet?</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500 text-gray-800"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-600 text-white py-3 px-6 rounded-md hover:bg-primary-700 transition-colors font-medium">Solicitar demo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Komet</h3>
+                    <p class="text-gray-400 mb-4">Precisión financiera al alcance de tu equipo.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Producto</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Características</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Precios</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition-colors">Demo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Seguridad</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Guías</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Soporte</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@komet.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Av. Innovación 1234, Ciudad Tecnológica</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Komet. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Términos de servicio</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Política de privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
